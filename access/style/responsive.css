@@ -1,0 +1,271 @@
+/* responsive */
+
+
+/* pc độ phân giải thấp */
+@media (min-width: 1025px) and (max-width: 1239px) {
+    
+
+}
+
+@media (min-width: 1113px) {
+    
+}
+
+/* mobile and tablet */
+@media (max-width: 1024px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+    .container-content {
+        overflow: hidden;
+    }
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header-container {
+        height: 100%;
+    }
+    .header-nav__item-link-host::before {
+        top: 8px;
+        left: 44px;
+    }
+
+    /* Mobile-tablet__nav */
+.header-mobile-tablet__nav {
+    margin:0 20px;
+    display: block;
+}
+.header-mobile-tablet__nav-icon {
+    font-size: 2.4rem;
+    color: (--text-color);
+    padding: 14px;
+}
+
+
+/* modal Mobile-tablet__nav*/
+.small__nav--check {
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    animation: fadeIn linear 0.2s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#small__nav--check:checked ~ .overlay {
+    display: block;
+}
+
+.header-small-nav {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    animation: headerSmallNavShow linear 0.3s;
+    display: block;
+}
+@keyframes headerSmallNavShow {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.header-small-nav__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 16px;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+.header-small-nav__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    margin: 1.6rem 0 2rem 2rem;
+}
+.header-small-nav__list {
+    margin-top: 6rem;
+    padding:2rem 2rem 0 2rem;
+    border-top: 1px solid #dad7d7;
+}
+
+.header-small-nav__link {
+    display: block;
+    padding: 12px;
+}
+.header-small-nav__link:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.header-small-nav__item-languages {
+    width: 100%;
+    margin: 12px 0;
+    position: relative;
+}
+.header-small-nav__item-languages i {
+    position: absolute;
+    right: 12px;
+    top: 25%;
+    font-size: 1.6rem;
+}
+
+/* form languages and currency */
+.header-nav__languages-currency {
+    display: flexbox;
+    width: 100%;
+
+}
+
+.languages__list,
+.currency__list {
+width: 100%;
+border: none;
+display: block;
+}
+
+.header-nav__languages:focus .header-nav__languages-currency {
+    display: block;
+}
+
+.explore__item-img {
+    height: 100%;
+}
+
+}
+
+/* tablet */
+@media (min-width: 740px) and (max-width: 1024px) {
+    .hide-on-tablet {
+        display: none;
+    }
+    .header-search__element {
+        width: 56rem;
+    }
+
+    .header-small-nav {
+        width: 40%;
+    }
+
+    .app-download__app a {
+        margin-right: 6rem;
+        margin-bottom: 2rem;
+    }
+
+    .download__app-appstore-link,
+    .download__app-huawei-link,
+    .download__app-gg-play-link {
+        display: block;
+    }
+    .download__app-appstore-link img,
+    .download__app-huawei-link img,
+    .download__app-gg-play-link img{
+        width: 80%;
+    }
+
+
+    .footer-container {
+        padding: 0 2rem 3rem;
+    }
+
+    .footer__item-introduct {
+        margin-bottom: 2rem;
+    }
+    .footer-transaction {
+        text-align: left;
+        padding-left: 8px;
+    }
+    .footer-transaction__img img {
+        width: 32%;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+
+    /* chat on mobile */
+    .mobile-chat {
+        display: block;
+    }
+
+    /* nút alo phone */
+    .coccoc-alo-phone {
+        width: 160px;
+        height: 130px;
+    }
+    .coccoc-alo-ph-img-circle {
+        top: 42px;
+        left: 45px;
+    }
+    .coccoc-alo-ph-circle-fill {
+        top: 22px;
+        left: 25px;
+    }
+    .hide-on-mobile {
+        display: none;
+    }
+    .header-search {
+        width: 86%;
+    }
+
+    .header-small-nav {
+        width: 70%;
+    }
+
+    .app__info-logo {
+        width: 20rem;
+    }
+    .app__info-heading {
+        font-size: 2rem;
+    }
+    .app-download__app a{
+        margin-bottom: 2rem;
+    }
+    .app-interface {
+        margin-top: 2rem;
+    }
+
+    .footer-transaction {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+    .footer-transaction__heading {
+        margin-left: 8px;
+    }
+    .footer-certification-follow {
+        display: block;
+        text-align: left;
+    }
+    .footer-certification {
+        margin-bottom: 4rem;
+    }
+    .footer-certification__img {
+        justify-content: space-around;
+    }
+    .footer-certification__img img {
+        width: 40%;
+    }
+
+    .footer-follow__contact {
+        margin-left: 2rem;
+    }
+}

@@ -1,0 +1,838 @@
+/* form-places-select */
+.form-places {
+    width: 28.2rem;
+    background-color: #fff;
+    box-shadow: 0 0 2px #6f6f6f;
+    border-radius: 4px;
+    position: absolute;
+    top: 4.3rem;
+    left: 0;
+    z-index: 2;
+    display: none;
+    transform-origin: 10% top; /*xét điểm bắt đầu xuất hiện cho tranform */
+    animation: headerShowForm ease-in 0.2s;
+    will-change: opacity,transform; /*Giúp hiệu ứng chuyển đổi được linh hoạt hơn*/
+}
+
+.form-places::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 2rem;
+    border-width: 10px 12px;
+    border-style: solid;
+    border-color: transparent transparent #eee transparent;
+}
+.form-places.active {
+    display: block;
+}
+
+.form-places_label {
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+    font-size: 1.2rem;
+}
+.form-places_label-icon {
+    margin-left: 8px;
+    color: #000;
+}
+.form-places_label-content {
+    margin: 8px;
+    color: #000;
+    font-weight: bold;
+}
+
+.form-places_search {
+    padding: 8px;
+    border-top: 1px solid rgb(207, 207, 207);
+    border-bottom: 1px solid rgb(207, 207, 207);
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.form-places_search-icon {
+    padding-right: 6px;
+}
+.form-places_search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+}
+
+.form-places_select {
+    height: 29rem;
+    overflow-y: auto;
+}
+.form-places_select-link {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 1.2rem;
+    color: #333;
+}
+.form-places_select-link:hover .places_select-link-name {
+    color: orangered;
+}
+.places_select-link-name {
+    font-weight: bold;
+}
+
+
+.form-places_footer {
+    background-color: #eee;
+}
+.form-places_footer-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.form-places_footer-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.form-places_footer-icon {
+    margin-right: 4px;
+}
+
+
+/* form select category activities */
+.form-activeties {
+    background-color: #fff;
+    box-shadow: 0 0 2px #6f6f6f;
+    border-radius: 4px;
+    width: 20rem;
+    position: absolute;
+    top: 4.3rem;
+    left: 0;
+    z-index: 2;
+    display: none;
+    transform-origin: 10% top; /*xét điểm bắt đầu xuất hiện cho tranform */
+    animation: headerShowForm ease-in 0.2s;
+    will-change: opacity,transform; /*Giúp hiệu ứng chuyển đổi được linh hoạt hơn*/
+}
+
+.form-activeties.active {
+    display: block;
+}
+.form-activeties::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 2rem;
+    border-width: 10px 12px;
+    border-style: solid;
+    border-color: transparent transparent #eee transparent;
+}
+
+.form-activeties_heading {
+    background-color: #eee;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 3.2rem;
+    padding: 0 10px;
+    color: #333;
+}
+.form-activeties_heading-icon {
+    margin-right: 4px;
+}
+
+.form-activeties_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    padding: 8px 8px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+.form-activeties_item:hover {
+    color: orangered;
+}
+.form-activeties_item-content {
+    margin: 0;
+}
+
+/* Hiện select của form activities */
+.form-activeties_item:hover .form-activeties_select-list {
+    display: block;
+}
+.form-activeties_select-list {
+    position: absolute;
+    left: 20.1rem;
+    top: 0;
+    max-height: 20rem;
+    width: 20rem;
+    padding-top: 4px;
+    overflow-y: auto;
+    border-radius: 2px;
+    border: 1px solid #f6f6f6;
+    box-shadow: 0 0 3px #444;
+    background-color: #fff;
+    display: none;
+}
+.form-activeties_select-link {
+    display: block;
+    padding: 6px 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 1.2rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+.form-activeties_select-link:hover {
+    color: orangered;
+}
+.form-activeties_select-link-img {
+    width: 2rem;
+    margin-right: 8px;
+}
+
+/* form download */
+.form-download {
+    position: absolute;
+    top: 43px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 2px #6f6f6f;
+    border-radius: 4px;
+    cursor: default;
+    display: none;
+    z-index: 2;
+    transform-origin: 10% top; /*xét điểm bắt đầu xuất hiện cho tranform */
+    animation: headerShowForm ease-in 0.2s;
+    will-change: opacity,transform; /*Giúp hiệu ứng chuyển đổi được linh hoạt hơn*/
+}
+.form-download.active {
+    display: block;
+}
+.form-download::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 2rem;
+    border-width: 6px 10px;
+    border-style: solid;
+    border-color: transparent transparent #eee transparent;
+}
+
+.form-download_QR-img {
+    width: 18rem;
+}
+
+.form-download_app {
+    display: flex;
+    justify-content: space-between;
+}
+.form-download_app-link {
+    padding: 10px;
+}
+.form-download_app-img {
+    width: 7rem;
+}
+
+/* form notification */
+.form-notifications {
+    position: absolute;
+    top: 4.1rem;
+    right: -10px;
+    width: 40rem;
+    background-color: #fff;
+    box-shadow: 0 0 2px #6f6f6f;
+    border-radius: 4px;
+    cursor: default;
+    display: none;
+    z-index: 2;
+    transform-origin: 90% top; /*xét điểm bắt đầu xuất hiện cho tranform */
+    animation: headerShowForm ease-in 0.2s;
+    will-change: opacity,transform; /*Giúp hiệu ứng chuyển đổi được linh hoạt hơn*/
+}
+.form-notifications.active {
+    display: block;
+}
+.form-notifications::before {
+    content: "";
+    position: absolute;
+    top: -19px;
+    right: 12px;
+    border-width: 10px 12px;
+    border-style: solid;
+    border-color: transparent transparent #eee transparent;
+}
+
+.notifications_heading-content {
+    margin: 0;
+    background-color: rgb(245, 245, 245);
+    font-size: 1.4rem;
+    color: rgb(138, 136, 136);
+    padding: 12px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.form-notifications_list {
+    max-height: 32rem;
+    overflow-y: auto;
+}
+.form-notifications_link {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    height: 64px;
+    border-bottom: 1px solid rgb(221, 219, 219);
+}
+.form-notifications_link.new-notification:hover {
+    background-color: #fbf3f4;
+}
+.form-notifications_link.new-notification {
+    background-color: rgb(255 235 238);
+}
+.form-notifications_link-img {
+    width: 5rem;
+    object-fit: contain;
+    margin: 0 8px;
+}
+.notifications-content_heading {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #333;
+}
+.notifications-content_content {
+    font-size: 1.2rem;
+    color: rgb(95, 95, 95);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.form-notifications_footer-content {
+    font-size: 1.4rem;
+    color: rgb(95, 95, 95);
+    line-height: 4rem;
+    display: block;
+    text-align: center;
+}
+.form-notifications_footer-content:hover {
+    color: rgb(252, 100, 45);
+    cursor: pointer;
+}
+
+/* form-add-element */
+.form-add-element {
+    position: absolute;
+    top: 4.1rem;
+    right: -20px;
+    width: 30rem;
+    background-color: #fff;
+    box-shadow: 0 0 2px #6f6f6f;
+    border-radius: 4px;
+    cursor: default;
+    display: none;
+    z-index: 2;
+    transform-origin: 90% top; /*xét điểm bắt đầu xuất hiện cho tranform */
+    animation: headerShowForm ease-in 0.2s;
+    will-change: opacity,transform; /*Giúp hiệu ứng chuyển đổi được linh hoạt hơn*/
+}
+.form-add-element::before {
+    content: "";
+    position: absolute;
+    top: -19px;
+    right: 23px;
+    border-width: 10px 12px;
+    border-style: solid;
+    border-color: transparent transparent #eee transparent;
+}
+.form-add-element.active {
+    display: block;
+}
+.form-add_heading {
+    margin: 0;
+    font-size: 1.4rem;
+    padding: 10px 12px;
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #eee;
+}
+
+.form-add_link {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid #f6f6f6;
+}
+.form-add_link:hover {
+    background-color: #f9f9f9;
+}
+.form-add_link-icon {
+    font-size: 2.2rem;
+    margin-right: 8px;
+    color: #888;
+}
+
+.form-add_link-name {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+.form-add_link-description {
+    font-size: 1.2rem;
+    color: #999;
+}
+
+/* select-languages */
+.select-languages {
+    position: absolute;
+    right: 0;
+    top: 4.3rem;
+    background-color: #fff;
+    box-shadow: 0 0 2px #6f6f6f;
+    border-radius: 2px;
+    align-items: center;
+    padding: 4px 8px;
+    display: none;
+}
+.select-languages.active {
+    display: flex;
+}
+.select-languages_img {
+    width: 26px;
+    margin-right: 4px;
+}
+.select-languages_name {
+    color: #666;
+}
+
+/* menu-user */
+.user-menu_list {
+    position: absolute;
+    background-color: #fff;
+    width: 26rem;
+    top: 46px;
+    left: -28px;
+    border-radius: 6px;
+    box-shadow: 0 0 2px #999;
+    display: none;
+    transform-origin: 30% top; /*xét điểm bắt đầu xuất hiện cho tranform */
+    animation: headerShowForm ease-in 0.2s;
+    will-change: opacity,transform; /*Giúp hiệu ứng chuyển đổi được linh hoạt hơn*/
+}
+.user-menu_list::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 8rem;
+    border-width: 10px 12px;
+    border-style: solid;
+    border-color: transparent transparent rgb(214, 214, 214) transparent;
+}
+.user-menu_list.active {
+    display: block;
+}
+.user-menu_item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+}
+.user-menu_item:hover {
+    background-color: #ffe9ad;
+}
+.menu_item-border-top {
+    border-top: 1px solid rgb(214, 214, 214);
+}
+.user-menu_header-img {
+    height: 24px;
+    width: 24px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-right: 8px;
+}
+.user-menu_header-name {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.menu-item_icon {
+    font-size: 1rem;
+    padding: 5px;
+    background-color: #888;
+    color: #fff;
+    border-radius: 50%;
+}
+.menu-item_icon-green {
+    background-color: #01b169;
+}
+.menu-item_icon-blue {
+    background-color: #008cdd;
+}
+.menu-item_icon-out {
+    font-size: 1.2rem;
+    color: #999;
+}
+.menu-item_content {
+    flex: 1;
+    font-size: 1.2rem;
+    margin-left: 6px;
+}
+
+
+/* form login */
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 5;
+    display: none;
+    animation: ShowOpacity linear 0.2;
+}
+@keyframes ShowOpacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.overlay-login.active {
+    display: flex;
+}
+.form-login {
+    width: 60rem;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: auto;
+
+}
+.form-heading {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+.form-heading_content {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.form-heading_name {
+    font-size: 2rem;
+    margin: 0;
+    color: red;
+    position: relative;
+    top: 4px;
+}
+.form-heading_logo {
+    height: 3.8rem;
+    margin-right: 6px;
+}
+.form-heading_icon,
+.form-heading_icon-back {
+    font-size: 2rem;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+.form-heading_icon-back {
+    display: none;
+}
+.form-heading_icon-back.active {
+    display: block;
+}
+.form-heading_icon:hover {
+    border-top-right-radius: 8px;
+    background-color: #eee;
+}
+.form-heading_icon-back:hover {
+    border-top-left-radius: 8px;
+    background-color: #eee;
+}
+
+.form-login_main {
+    padding: 2.4rem 9.6rem;
+    text-align: center;
+}
+.form-main_heading {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin: 0;
+    margin-bottom: 8px;
+    color: #333;
+}
+.form-main_description {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 8px;
+    color: #444
+}
+
+.form-login_input {
+    align-items: center;
+    height: 6rem;
+    margin: 16px 0;
+    display: none;
+    transform-origin: 50% top; /*xét điểm bắt đầu xuất hiện cho tranform */
+    animation: headerShowForm ease-in 0.2s;
+    will-change: opacity,transform; /*Giúp hiệu ứng chuyển đổi được linh hoạt hơn*/
+}
+.form-login_input.active {
+    display: flex;
+}
+.login-input_label {
+    height: 5rem;
+    background-color: #e9e9e9;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.login-input_label-img {
+    width: 3rem;
+    margin: 0 6px;
+}
+.login-input_label-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #07a0ff;
+    margin-right: 6px;
+    position: relative;
+    top: 2px;
+}
+.login-input_input {
+    flex: 1;
+    height: 5.4rem;
+    font-size: 2rem;
+    padding: 0 10px;
+    border: 2px solid #2aadff;
+    border-radius: 8px;
+    background-color: #f6f6f6;
+    outline: none;
+}
+.login-input_input:focus {
+    border: 2px solid #0079c4;
+}
+
+.form-login_input-pass {
+    width: 100%;
+    margin: 2rem 0 5rem;
+    position: relative;
+    display: none;
+    opacity: 0;
+    transform-origin: 50% top; /*xét điểm bắt đầu xuất hiện cho tranform */
+    animation: headerShowForm ease-in 0.2s;
+    will-change: opacity,transform; /*Giúp hiệu ứng chuyển đổi được linh hoạt hơn*/
+}
+.form-login_input-pass.active {
+    display: block;
+    transition:  linear 0.2s;
+    opacity: 1;
+}
+.login-input_pass {
+    display: block;
+    width: 100%;
+    height: 5rem;
+    font-size: 2rem;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(223, 221, 221);
+}
+.login-input_pass:hover {
+    border-bottom: 2px solid rgb(187, 187, 187);
+}
+.login-input_pass:focus {
+    border-bottom: 2px solid #60c0fc;
+    transition: linear 0.5s;
+}
+.login-input_forget-pass {
+    font-size: 1.4rem;
+    margin-top: 1.6rem;
+    display: block;
+    position: absolute;
+    right: 0;
+    color: #0079c4;
+}
+.login-input_forget-pass:hover {
+    color: rgb(216, 74, 23);
+}
+
+.form-login_btn,
+.form-login_btn-2 {
+    width: 100%;
+    height: 4rem;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(252, 42, 42);
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.form-login_btn:hover
+.form-login_btn-2:hover {
+    opacity: 0.8;
+}
+.form-login_btn.active,
+.form-login_btn-2.active {
+    display: flex;
+}
+
+.form-login_other {
+    margin-top: 4rem;
+    border-top: 1px solid #eee;
+    position: relative;
+}
+.form-login_or {
+    position: absolute;
+    bottom: 90%;
+    right: 50%;
+    font-weight: 300;
+    font-size: 1.4rem;
+    transform: translateX(50%);
+    background-color: #fff;
+    padding: 0 8px;
+    color: #999;
+    
+}
+.form-login_facebook {
+    display: block;
+    margin: 2.4rem 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #055a8f;
+}
+.form-login_facebook-icon {
+    font-size: 2rem;
+    margin-right: 2px;
+}
+.form-login_rules {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2aadff;
+}
+
+/* Map-Address */
+.overlay-address.active{
+    display: block;
+}
+
+.Map-form-container {
+    position: absolute;
+    top: calc(var(--header-topbar-height) + var(--header-toolbar-height));
+    right: 50%;
+    transform: translateX(50%);
+    margin: auto;
+    width: 600px;
+    max-height: 56rem;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    animation: ShowOpacity linear 0.4s;
+    will-change: opacity; /*Giúp hiệu ứng chuyển đổi được linh hoạt hơn*/
+}
+.Map-form-container::-webkit-scrollbar {
+    border-radius: 8px;
+}
+.Select-location_now {
+    position: fixed;
+    top: 4rem;
+    right: 4rem;
+}
+.Select-location_icon {
+    font-size: 1.6rem;
+    padding: 8px;
+    background-color: #fff;
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.Map-form-content {
+    font-size: 2.4rem;
+    color: #333;
+    padding: 0 12px;
+    margin-bottom: 24px;
+}
+.Map-form_input {
+    display: flex;
+    margin: 0 12px;
+}
+.Map-form_input-icon {
+    font-size: 1.6rem;
+    color: red;
+    margin-right: 12px;
+}
+.Map-form_input-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #eee;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0 8px;
+}
+.Map-form_input-input:hover {
+    border-bottom: 2px solid #999;
+}
+.Map-form_input-input:focus {
+    border-bottom: 2px solid #0079c4;
+    transition: linear 0.5s;
+}
+
+.Map-form_location {
+    display: flex;
+    align-items: center;
+    margin: 2rem 12px;
+    cursor: pointer;
+}
+.Map-form_location-icon {
+    color: #444;
+    font-size: 1.6rem;
+    margin-right: 12px;
+}
+.Map-form_location-heading {
+    margin: 0;
+    font-size: 1.6rem;
+}
+.Map-form_location-now {
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: #666;
+    margin-left: 4px;
+}
+
+.Map-form_footer {
+    padding: 12px 0;
+    border-top: 1px solid #eee;
+    font-size: 1.6rem;
+    color: #666;
+}
+.Map-form_footer-content {
+    padding: 12px;
+    cursor: pointer;
+}
+.Map-form_footer-icon {
+    padding-right: 4px;
+}
+
+/* keyframes */
+@keyframes headerShowForm {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }    
+}
