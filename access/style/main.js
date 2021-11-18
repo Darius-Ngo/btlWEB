@@ -322,19 +322,20 @@ const header = {
         SignOutBtn.onclick = function() {
             UserBtn.classList.remove('login');
             LoginBtn.classList.add('active');
+            BtnRegister.classList.add('active');
         }
 
         // Hiện form login
-        const OverLay = $('.overlay-login');
+        const OverLayLogin = $('.overlay-login');
         const CloseOverLay = $('.form-heading_icon');
         let showOverLay = false;
         LoginBtn.onclick = function() {
             showOverLay = true;
-            OverLay.classList.add('active');
+            OverLayLogin.classList.add('active');
         }
         CloseOverLay.onclick =function() {
             showOverLay = false;
-            OverLay.classList.remove('active');
+            OverLayLogin.classList.remove('active');
         }
 
         // Đăng nhập
@@ -346,6 +347,7 @@ const header = {
         const IconBack = $('.form-heading_icon-back');
         const TagInputPhoneNumber = $('#phoneNumber');
         const TagInputPassWord = $('#password');
+        const BtnRegister = $('.toolBar-register');
 
         LoginAccountFormBtn.onclick = function () {
             if(TagInputPhoneNumber.value != '') {
@@ -369,13 +371,31 @@ const header = {
             DescriptionForm.innerText = 'Nhập số điện thoại để tiếp tục';
         }
 
-        LoginAccountFormBtn2.onclick = function() {
-            if(TagInputPhoneNumber.value == '0358102912' && TagInputPassWord.value == 'long311') {
-                UserBtn.classList.add('login');
-                showOverLay = false;
-                OverLay.classList.remove('active');
-                LoginBtn.classList.remove('active');
-            }
+        // Quên mật khẩu
+        const forgotPassWord = $('.login-input_forget-pass');
+        const FormForgotPassWord = $('.overlay-forgotpassword');
+        const hiddenFormForgot = $('.form-forgotpass_icon');
+        const ForgotPassWordSDT = $('.form-forgotpass_input-sdt');
+        forgotPassWord.onclick = function() {
+            FormForgotPassWord.classList.add('active');
+            ForgotPassWordSDT.value = TagInputPhoneNumber.value;
+            alert('Forgot Password');
+        }
+        hiddenFormForgot.onclick = function() {
+            FormForgotPassWord.classList.remove('active');
+        }
+
+        // Đổi mật khẩu
+        const ChangePassWord = $('.changePassWord-item');
+        const FormChangePassWord = $('.overlay-change-password');
+        const hiddenFormChangepw = $('.form-change-password_icon');
+        const ChangePassWordSDT = $('.form-changepw_input-sdt');
+        ChangePassWord.onclick = function() {
+            FormChangePassWord.classList.add('active');
+            ChangePassWordSDT.value = TagInputPhoneNumber.value;
+        }
+        hiddenFormChangepw.onclick = function() {
+            FormChangePassWord.classList.remove('active');
         }
 
         // Map-address
@@ -388,10 +408,7 @@ const header = {
         BackBtn.onclick = () => {
             FormMap.classList.remove('active');
         }
-        // FormMap.addEventListener('click', function() {
-        //     FormMap.classList.remove('active');
-        // })
-
+        
     },
 
     start: function() {
@@ -401,3 +418,45 @@ const header = {
     }
 }
 header.start();
+
+const store = {
+    handleEvent: function() {
+        const Q1 = $("#Q1");
+		const Q2 = $("#Q2");
+		const Q3 = $("#Q3");
+		const SP1 = $("#SP1");
+		const SP2 = $("#SP2");
+		const SP3 = $("#SP3");
+		const Quan = $(".KhuVuc_Item");
+		const SP = $(".TheChuaSP");	
+
+		Q1.onclick = function() {
+			Q1.classList.add('active');
+			Q2.classList.remove('active');
+			Q3.classList.remove('active');
+			SP1.classList.add('active');
+			SP2.classList.remove('active');
+			SP3.classList.remove('active');
+		}
+		Q2.onclick = function() {
+			Q1.classList.remove('active');
+			Q2.classList.add('active');
+			Q3.classList.remove('active');
+			SP1.classList.remove('active');
+			SP2.classList.add('active');
+			SP3.classList.remove('active');
+		}
+		Q3.onclick = function() {
+			Q1.classList.remove('active');
+			Q2.classList.remove('active');
+			Q3.classList.add('active');
+			SP1.classList.remove('active');
+			SP2.classList.remove('active');
+			SP3.classList.add('active');
+		}
+    },
+    start: function() {
+        this.handleEvent();
+    }
+}
+store.start();

@@ -147,7 +147,8 @@
     margin-right: 8px;
 }
 
-.toolBar-account {
+.toolBar-account,
+.toolBar-register {
     font-size: 1.4rem;
     padding: 10px;
     border-radius: 6px;
@@ -156,10 +157,12 @@
     display: none;
 }
 .toolBar-User.active,
-.toolBar-account.active {
+.toolBar-account.active,
+.toolBar-register.active {
     display: block;
 }
-.toolBar-account:hover {
+.toolBar-account:hover,
+.toolBar-register:hover {
     color: #333;
     background-color: #eee;
 }
@@ -268,9 +271,6 @@
 }
 
 
-.container-app {
-
-}
 /* Hieu */
 .introduce.hieu {
     margin-top: 4rem;
@@ -288,8 +288,8 @@
 .slick-prev:before,
 .slick-next:before {
     font-family: fontawesome;
-    font-size: 3.2rem !important;
-    color: #646464 !important;
+    font-size: 3.2rem;
+    color: #646464;
     margin: 0 -5px;
     opacity: 0.7;
 }
@@ -325,8 +325,9 @@
 .introduce-title {
     font-size: 14px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     margin: 3rem 0 1.6rem;
+    padding: 0 12px;
 }
 
 .introduce-list-item {
@@ -358,6 +359,7 @@
     justify-content: center;
     font-size: 16px;
     padding: 24px;
+    margin-top: 2rem;
     font-weight: 800;
     color: #333;
 }
@@ -368,6 +370,12 @@
 
 
 /* hiệp */
+.heading-content {
+    font-size: 14px;
+    display: flex;
+    justify-content: start;
+    margin: 3rem calc((100% - 120rem) /2) 1.6rem;
+}
 #hiep {
     margin-top:40px;
 }
@@ -430,7 +438,7 @@
 }
 .Hang{
     display : flex;
-    width: 11.4rem;
+    width: 11.4rem; 
     height: 2.1rem;
     align-items: center;
 }
@@ -443,4 +451,89 @@
 }
 .TheChuaSP.active{
     display: block;
+}
+
+
+/* Nam */
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+.footer{
+    padding-top: 3rem;
+    border-top: 4px solid #ff3b3b;
+    margin-top: 8rem;
+}
+.footer__heading{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #333;
+}
+.footer-text{
+    font-size: 1.2rem;
+}
+/* Css cho chữ ,li*/
+.footer-list{
+    padding-left: 0;
+    font-size: 1.2rem;
+}
+.footer-item__link{
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 6px 0;
+    display: block;
+    align-items: center;
+    color: #737373;
+}
+.footer-item__link:hover{
+    color: rgb(226, 36, 36);
+}
+.footer-item__icon{
+    font-size: 1.65rem;
+    margin: -1px 6px 0 0;    
+}
+/* css cho QR */
+.footer__download{
+    display: flex;  /* cho ảnh nằm ngang */
+}
+.footer__download-qr{
+width: 80px;
+height: 80px;
+border: 1px solid #dbdbdb;
+}
+.footer__download-apps{
+flex: 1;
+margin-left: 12px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.footer__download-apps-link{
+    text-decoration: none;
+    color: transparent;
+}
+.footer__download-apps-img{
+    height: 24px;
+}
+/* css bottom */
+.footer__bottom{
+    padding: 8px 0;
+}
+.footer__logo{
+    display: flex;
+   justify-content: center;
+   height: 40px;
+}
+.footer__text-bottom{
+    margin: 2rem 0;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-align: center;
 }

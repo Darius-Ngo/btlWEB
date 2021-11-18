@@ -142,19 +142,19 @@ span {
 
 .coccoc-alo-phone.coccoc-alo-green.coccoc-alo-hover .coccoc-alo-ph-circle,
 .coccoc-alo-phone.coccoc-alo-green:hover .coccoc-alo-ph-circle {
-    border-color: var(--hover-color);
+    border-color: greenyellow;
     opacity: .5;
 }
 
 .coccoc-alo-phone.coccoc-alo-green.coccoc-alo-hover .coccoc-alo-ph-circle-fill,
 .coccoc-alo-phone.coccoc-alo-green:hover .coccoc-alo-ph-circle-fill {
-    background-color: var(--hover-color);
+    background-color: greenyellow;
     opacity: .75 !important;
 }
 
 .coccoc-alo-phone.coccoc-alo-green.coccoc-alo-hover .coccoc-alo-ph-img-circle,
 .coccoc-alo-phone.coccoc-alo-green:hover .coccoc-alo-ph-img-circle {
-    background-color: var(--hover-color);
+    background-color: greenyellow;
 }
 
 @-moz-keyframes coccoc-alo-circle-anim {
