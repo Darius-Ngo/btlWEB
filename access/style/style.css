@@ -147,6 +147,7 @@
     margin-right: 8px;
 }
 
+.toolBar-admin,
 .toolBar-account,
 .toolBar-register {
     font-size: 1.4rem;
@@ -156,11 +157,18 @@
     cursor: pointer;
     display: none;
 }
+.toolBar-admin {
+    border: 1px solid #eee;
+    margin-left: 12px;
+    color: #555;
+}
+.toolBar-admin.active,
 .toolBar-User.active,
 .toolBar-account.active,
 .toolBar-register.active {
     display: block;
 }
+.toolBar-admin:hover,
 .toolBar-account:hover,
 .toolBar-register:hover {
     color: #333;
@@ -369,6 +377,9 @@
 }
 
 
+/* Tú */
+
+
 /* hiệp */
 .heading-content {
     font-size: 14px;
@@ -381,11 +392,12 @@
 }
 
 #KhuVuc{
-	width: 15rem;
+	width: 22rem;
 	height: 65rem;
     background-color: #FFFFFF;
     padding: 0 6px;
     color: #333;
+    margin-right: 16px;
 }
 #ThanhCuon{
 	height: 45rem;

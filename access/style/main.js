@@ -319,10 +319,25 @@ const header = {
 
         // Đăng xuất
         const SignOutBtn = $('.user-menu_item-sign-out');
+        const btnAdmin = document.getElementById('admin');
         SignOutBtn.onclick = function() {
             UserBtn.classList.remove('login');
             LoginBtn.classList.add('active');
             BtnRegister.classList.add('active');
+            btnAdmin.classList.remove('active');
+        }
+
+        // form control admin
+        const formControl = $('.control-menu_list');
+        let showControl = false;
+        btnAdmin.onclick = function() {
+            if(showControl) {
+                formControl.classList.remove('active');
+                showControl = false;
+            } else {
+                formControl.classList.add('active');
+                showControl = true;
+            }
         }
 
         // Hiện form login
@@ -346,7 +361,6 @@ const header = {
         const DescriptionForm = $('.form-main_description');
         const IconBack = $('.form-heading_icon-back');
         const TagInputPhoneNumber = $('#phoneNumber');
-        const TagInputPassWord = $('#password');
         const BtnRegister = $('.toolBar-register');
 
         LoginAccountFormBtn.onclick = function () {
@@ -354,7 +368,6 @@ const header = {
                 InputPhoneNumber.classList.remove('active');
                 InputPassWord.classList.add('active');
                 IconBack.classList.add('active');
-                // LoginAccountFormBtn.innerText = 'Đăng Nhập';
                 DescriptionForm.innerText = 'Nhập mật khẩu để đăng nhập';
                 LoginAccountFormBtn2.classList.add('active');
                 LoginAccountFormBtn.classList.remove('active');
@@ -365,7 +378,6 @@ const header = {
             InputPhoneNumber.classList.add('active');
             InputPassWord.classList.remove('active');
             IconBack.classList.remove('active');
-            // LoginAccountFormBtn.innerText = 'Tiếp tục';
             LoginAccountFormBtn.classList.add('active');
             LoginAccountFormBtn2.classList.remove('active');
             DescriptionForm.innerText = 'Nhập số điện thoại để tiếp tục';

@@ -477,6 +477,44 @@
     margin-left: 6px;
 }
 
+/* control form */
+.toolBar-admin{
+    position: relative;
+}
+.control-menu_list {
+    position: absolute;
+    background-color: #fff;
+    width: 23rem;
+    top: 46px;
+    left: -62px;
+    border-radius: 6px;
+    box-shadow: 0 0 2px #999;
+    display: none;
+    transform-origin: 30% top; /*xét điểm bắt đầu xuất hiện cho tranform */
+    animation: headerShowForm ease-in 0.2s;
+    will-change: opacity,transform; /*Giúp hiệu ứng chuyển đổi được linh hoạt hơn*/
+}
+.control-menu_list::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 8rem;
+    border-width: 10px 12px;
+    border-style: solid;
+    border-color: transparent transparent rgb(214, 214, 214) transparent;
+}
+.control-menu_list.active {
+    display: block;
+}
+.user-menu_item-header,
+.control-menu_item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+}
+.control-menu_item:hover {
+    background-color: #ffe9ad;
+}
 
 /* form login */
 .overlay {
@@ -871,7 +909,9 @@
 .form-notify {
     color: red;
     font-size: 1.4rem;
-    justify-content: start;
+    text-align: left;
+    display: block;
+    margin-left: 14px;
 }
 
 

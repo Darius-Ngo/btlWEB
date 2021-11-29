@@ -1,0 +1,132 @@
+body {
+    background-image: linear-gradient(#ffc9ce,#f1dcc6,#dee0cc);
+    background-repeat: no-repeat;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+.btnback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    padding: 6px 12px;
+    background-color: rgb(236, 117, 74);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+.heading-content {
+    display: block;
+    text-align: center;
+}
+
+.form-search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 1088px;
+    margin: 20px auto 40px;
+    border-bottom: 1px solid #999;
+    padding-bottom: 20px;
+}
+#btnsearch {
+    height: 34px;
+    margin-left: 8px;
+    background-color: rgb(236, 117, 74);
+}
+#txtsearch {
+    padding: 6px 5px;
+    font-size: 14px;
+}
+.form-input {
+    width: 900px;
+    margin: auto;
+}
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+label.lable-input {
+   display: block; 
+   margin: 0 4px 4px;
+   font-size: 16px;
+   font-weight: bold;
+}
+.input-taginput {
+    width: 240px;
+    outline: none;
+    border: 2px solid #999;
+    border-radius: 4px;
+    padding: 4px 5px;
+    color: #444;
+}
+.input-taginput:hover {
+    border: 2px solid #666;
+}
+.input-taginput:focus {
+    border: 2px solid rgb(17, 189, 247);
+    transition: linear 0.5s;
+}
+
+#txtnghiepvu,
+#txtcauhoi {
+    width: 252px;
+    padding: 5px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin: 40px auto;
+}
+.btn-form {
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.icon-form {
+    margin-right: 4px;
+}
+#btnsave {
+    background-color: rgb(71, 71, 243);
+}
+#btnexcel {
+    background-color: green;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+table {
+    margin-bottom: 40px;
+}
+td, th {
+    padding: 6px 8px;
+}
+th,td,tr {
+    border: 1px solid #999;
+}
+.btnupdate,
+.btndelete {
+    padding: 4px 10px;
+    margin: 6px 4px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 12px
+}
+.btnupdate {
+    background-color: rgb(9, 194, 9);
+}
+.btndelete {
+    background-color: rgb(230, 95, 95);
+}

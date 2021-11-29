@@ -19,7 +19,7 @@
             $query = "UPDATE account SET PassWord = '".$pwnew."' where SDT = '".$sdt."'";
             $result = mysqli_query($conn, $query);
             echo "<script type='text/javascript'>";
-            echo "alert('Đổi mật khẩu thành công.');";
+            echo "alert('Đổi mật khẩu thành công, vui lòng đăng nhập lại với mật khẩu mới.');";
             echo "window.location.href='http://localhost:8080/Web-Food/index.php';";
             echo "</script>";
         }else {

@@ -1,0 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&subset=vietnamese);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&subset=vietnamese);
+@-webkit-keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.verify-code-box{text-align:center}.verify-code-box .verify-code{background:#ebebeb;display:inline-block;font-weight:bold;height:50px;margin:0 4px;text-align:center;width:50px}.verify-code-box .verify-code:focus{border:2px solid #0897ee}
+

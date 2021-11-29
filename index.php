@@ -13,14 +13,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+    <link rel="stylesheet" href="./access/style/styleProduct.css">
     <link rel="stylesheet" href="./access/style/base.css">
     <link rel="stylesheet" href="./access/style/grid.css">
-    <link rel="stylesheet" href="./access/style/style.css">
+    <link rel="stylesheet" href="http://localhost:8080/Web-Food/access/style/style.css">
     <link rel="stylesheet" href="./access/style/style-form.css">
     <link rel="stylesheet" href="./access/style/responsive.css">
     <title>EAT Food - Địa điểm ăn uống, ẩm thực, ăn gì ở đâu tại Hà Nội, nhà hàng,...</title>
     <link rel="icon" href="./access/img/header/logo.jpg" type="image/x-icon" />
-    
+    <style>
+        .slick-next:before, 
+        .slick-prev:before {
+            font-size: 36px !important; 
+            color: #999 !important;
+        }
+        .introduce-list-item {
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            max-height: 154px;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <!-- TopBar -->
@@ -28,12 +43,15 @@
         <ul class="topBar_list">
             <li class="topBar_item"><a href="" class="topBar_link active">Khám Phá</a></li>
             <li class="topBar_item"><a href="" class="topBar_link">Đặt Giao Hàng</a></li>
-            <li class="topBar_item"><a href="" class="topBar_link new">Đi Chợ
+            <li class="topBar_item"><a href="./access/php/giohang-donhang/vongquaymayman/VòngQuayGiảiThưởng-NgẫuNhiên.html" class="topBar_link new">Săn Voucher
                 <!-- new icon -->
                 <p class="note-new">NEW</p>
             </a></li>
             <li class="topBar_item"><a href="" class="topBar_link">NowPOS</a></li>
-            <li class="topBar_item"><a href="" class="topBar_link">Giảm Giá</a></li>
+            <li class="topBar_item"><a href="http://localhost:8080/Web-Food/access/php/giohang-donhang/indexall.php" class="topBar_link new">Đi Chợ
+                <!-- new icon -->
+                <p class="note-new">NEW</p>
+            </a></li>
         </ul>
     </header>
     <!-- ToolBar -->
@@ -354,6 +372,31 @@
                 </ul>
             </div>
 
+            <div class="toolBar-admin" id="admin">Admin
+                <!-- form control -->
+                <ul class="control-menu_list">
+                    <li class="user-menu_item-header">
+                        <span class="menu-item_content" style="font-weight: bold; font-size: 13px;">Chức năng Admin </span>
+                    </li>
+                    <a href="./access/php/qltaikhoan/indexTK.php" class="control-menu_item menu_item-border-top">
+                        <i class="fas fa-user-circle " style="color: green;"></i>
+                        <span class="menu-item_content">Tài khoản người dùng</span>
+                    </a>
+                    <a href="./access/php/cuahang/admin/index.php" class="control-menu_item">
+                        <i class="fas fa-store" style="color: #00aff2;"></i>
+                        <span class="menu-item_content">Cửa hàng liên kết</span>
+                    </a>
+                    <a href="./access/php/danhmuc/admin/category/index.php" class="control-menu_item ">
+                        <i class="fas fa-hamburger" style="color: orangered;"></i>
+                        <span class="menu-item_content">Danh mục & Sản phẩm</span>
+                    </a>
+                    <a href="./access/php/giohang-donhang/order_listing.php" class="control-menu_item ">
+                        <i class="far fa-file-alt" style="color: orange;"></i>
+                        <span class="menu-item_content">Đơn hàng </span>
+                    </a>
+                </ul>
+            </div>
+
             <div class="toolBar-notification">
                 <i class="fas fa-bell toolBar-notification_icon"></i>
                 <!-- form notifications -->
@@ -511,79 +554,7 @@
                 </div>
             </div>
         </div>
-        
-        <div class="introduce-title">
-            <h2>CHỌN THEO THỂ LOẠI</h2>
-        </div>
-
-        <div class="introduce-list-item">
-            <a href="#" class="category-item">
-                <div class="category-item-img">
-                    <img src="https://tea-3.lozi.vn/v1/images/resized/category-web-1164-1590572746?w=100&type=f" alt="An voi nhom">
-                </div>
-                <div class="category-item-title"><b>Ăn với nhóm</b></div>
-            </a>
-            <a href="#" class="category-item">
-                <div class="category-item-img">
-                    <img src="https://tea-3.lozi.vn/v1/images/resized/category-web-1169-1590480651?w=100&type=f" alt="An toi">
-                </div>
-                <div class="category-item-title"><b>Ăn tối</b></div>
-            </a>
-            <a href="#" class="category-item">
-                <div class="category-item-img">
-                    <img src="https://tea-3.lozi.vn/v1/images/resized/category-web-1167-1590480639?w=100&type=f" alt="An sang">
-                </div>
-                <div class="category-item-title"><b>Ăn sáng</b></div>
-            </a>
-            <a href="#" class="category-item">
-                <div class="category-item-img">
-                    <img src="https://tea-3.lozi.vn/v1/images/resized/category-web-1168-1590480600?w=100&type=f" alt="An trua">
-                </div>
-                <div class="category-item-title"><b>Ăn trưa</b></div>
-            </a>
-            <a href="#" class="category-item">
-                <div class="category-item-img">
-                    <img src="https://tea-3.lozi.vn/v1/images/resized/category-web-3-1590571350?w=100&type=f" alt="An vat">
-                </div>
-                <div class="category-item-title"><b>Ăn vặt</b></div>
-            </a>
-            <a href="#" class="category-item">
-                <div class="category-item-img">
-                    <img src="https://tea-3.lozi.vn/v1/images/resized/category-web-1378-1590396546?w=100&type=f" alt="Banh trang tron">
-                </div>
-                <div class="category-item-title"><b>Bánh tráng trộn</b></div>
-            </a>
-            <a href="#" class="category-item">
-                <div class="category-item-img">
-                    <img src="https://tea-3.lozi.vn/v1/images/resized/category-web-1641-1595558411?w=100&type=f" alt="Banh tam">
-                </div>
-                <div class="category-item-title"><b>Bánh tằm</b></div>
-            </a>
-            <a href="#" class="category-item">
-                <div class="category-item-img">
-                    <img src="https://tea-3.lozi.vn/v1/images/resized/category-web-1901-1631078473?w=100&type=f" alt="Banh ran vung">
-                </div>
-                <div class="category-item-title"><b>Bánh rán vừng</b></div>
-            </a>
-            <a href="#" class="category-item">
-                <div class="category-item-img">
-                    <img src="https://tea-3.lozi.vn/v1/images/resized/category-web-1362-1602650864?w=100&type=f" alt="Banh crepe">
-                </div>
-                <div class="category-item-title"><b>Bánh crepe</b></div>
-            </a>
-            <a href="#" class="category-item">
-                <div class="category-item-img">
-                    <img src="https://tea-3.lozi.vn/v1/images/resized/category-web-1900-1630917514?w=100&type=f" alt="Banh ca taiyaki" />
-                </div>
-                <div class="category-item-title"><b>Bánh cá taiyaki</b></div>
-            </a>
-        </div>
-        <a href="#" class="btn-view-all">
-            XEM TẤT CẢ
-            <i class="fas fa-chevron-right btn-view-all-icon"></i>
-        </a>
-    </div>
-    <!-- JS Hiếu -->
+            <!-- JS Hiếu -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -612,526 +583,115 @@
         }
         });
     </script>
+        <div class="introduce-title">
+            <h2>CHỌN THEO THỂ LOẠI</h2>
+        </div>
+    <?php 
+        require_once('./access/php/danhmuc/user/index.php');
+    ?>      
+    </div>
+    
+    <!-- Tú -->
+    <div class="heading-content">
+        <h2>SẢN PHẨM</h2>
+    </div>
+    <div class="container-product grid wide">
+        <div class="row">
+            <div class="col l-2-4">
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="http://localhost:8080/Web-Food/access/php/giohang-donhang/detail.php?ID=11">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="./access/img/product/1-1.png" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Trà Sữa Thái Xanh</div>
+                        <div class="portfolio-caption-subheading text-muted">30.000đ</div>
+                        <div class="portfolio-caption-subheading text-muted">4.3km</div>
+                        <button type="button" class="btn btn-warning" style=";margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%">Xem  </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col l-2-4">
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="http://localhost:8080/Web-Food/access/php/giohang-donhang/detail.php?ID=12">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="./access/img/product/2-1.png" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Tôm Hùm hấp xả</div>
+                        <div class="portfolio-caption-subheading text-muted">105.000đ</div>
+                        <div class="portfolio-caption-subheading text-muted">6.6km</div>
+                        <button type="button" class="btn btn-warning" style=";margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%">Xem</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col l-2-4">
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="http://localhost:8080/Web-Food/access/php/giohang-donhang/detail.php?ID=13">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="./access/img/product/3-1.png" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Cháo Ếch Singapore</div>
+                        <div class="portfolio-caption-subheading text-muted">45.000đ</div>
+                        <div class="portfolio-caption-subheading text-muted">7.6km</div>
+                        <button type="button" class="btn btn-warning" style=";margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%">Xem</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col l-2-4">
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="http://localhost:8080/Web-Food/access/php/giohang-donhang/detail.php?ID=14">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="./access/img/product/4-1.png" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Mì Kim Chi Hải Sản </div>
+                        <div class="portfolio-caption-subheading text-muted">49.000đ</div>
+                        <div class="portfolio-caption-subheading text-muted">7.5km</div>
+                        <button type="button" class="btn btn-warning" style=";margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%">Xem</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col l-2-4">
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="http://localhost:8080/Web-Food/access/php/giohang-donhang/detail.php?ID=15">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="./access/img/product/5-1.png" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Bánh Cua Tôm Càng</div>
+                        <div class="portfolio-caption-subheading text-muted">88.000đ</div>
+                        <div class="portfolio-caption-subheading text-muted">8.5km</div>
+                        <button type="button" class="btn btn-warning" style=";margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%">Xem</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="http://localhost:8080/Web-Food/access/php/giohang-donhang/indexall.php" class="btn-view-all">
+        XEM TẤT CẢ
+        <i class="fas fa-chevron-right btn-view-all-icon"></i>
+    </a>
 
     <!-- Hiệp -->
     <div class="heading-content">
         <h2>KHU VỰC</h2>
     </div>
-    <div class="TheDoAnChinh grid wide">
-		<div id="KhuVuc">
-			<p class="KhuVuc_Heading">Hà Nội</p>
-			<ul id="ThanhCuon">
-				<li class="KhuVuc_Item active" id="Q1"><a href="#">Quận Ba Đình</a></li>
-				<li class="KhuVuc_Item" id="Q2"><a href="#">Quận Hoàn Kiếm</a></li>
-				<li class="KhuVuc_Item" id="Q3"><a href="#">Quận Tây Hồ</a></li>
-				<li class="KhuVuc_Item"><a href="#">Quận Long Biên</a></li>
-				<li class="KhuVuc_Item"><a href="#">Quận Cầu Giấy</a></li>
-				<li class="KhuVuc_Item"><a href="#">Quận Đống Đa</a></li>
-				<li class="KhuVuc_Item"><a href="#">Quận Hai Bà Trưng</a></li>
-				<li class="KhuVuc_Item"><a href="#">Quận Hoàng Mai</a></li>
-				<li class="KhuVuc_Item"><a href="#">Quận Thanh Xuân</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Sóc Sơn</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Đông Anh</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Gia Lâm</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Từ Liêm</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Thanh Trì</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Mê Linh</a></li>
-				<li class="KhuVuc_Item"><a href="#">Quận Hà Đông</a></li>
-				<li class="KhuVuc_Item"><a href="#">Thị Xã Sơn Tây</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Ba Vì</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Phúc Thọ</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Đan Phượng</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Hoài Đức</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Quốc Oai</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Thạch Thất</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Chương Mỹ</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Thanh Oai</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Thường Tín</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Phú Xuyên</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Ứng Hòa</a></li>
-				<li class="KhuVuc_Item"><a href="#">Huyện Mỹ Đức</a></li>
-				<li class="KhuVuc_Item"><a href="#">Quận Nam Từ Liêm</a></li>
-				<li class="KhuVuc_Item"><a href="#">Quận Bắc Từ Liêm</a></li>
-			</ul>
-		</div>
-
-
-<!-- -------------      Thẻ div đồ ăn khác           ----------------------------------------------------- -->
-		<div class="TheChuaSP active" id="SP1">
-			<!-- /*Thẻ đồ ăn hàng trên*/ -->
-			<div class="TheChinh">
-				<div class="TheDoAn"><a href="#">
-					<div>
-						<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/pho-linh-tra-nguyen-thai-hoc-quan-ba-dinh-ha-noi-1612005799365283581-eatery-avatar-1612005799">
-						<br>
-						<b>Phổ Linh Trà - Nguyễn Thái Học</b>
-					</div>
-					<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>1.5km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p> Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-					<div>
-						<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/bep-gia-dinh-tiem-com-and-banh-online-quan-ba-dinh-ha-noi-1611854748120994563-eatery-avatar-1611854748">
-						<br>
-						<b>Bếp Gia Đình - Tiệm Cơm & Bánh Online</b>
-					</div>
-					<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>0.1km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p> Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-					<div>
-						<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/food-corner-2-ly-thai-to-eatery-avatar-1625905719">
-						<b>Food Corner Lý Thái Tổ</b>
-						<br>
-						<br>
-					</div>
-					<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>1.4km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p> Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/bun-cha-cao-ba-quat-quan-ba-dinh-ha-noi-1545905457034240468-eatery-avatar-1545905457">
-							<b>Bún Chả - Cao Bá Quát</b>
-							<br><br>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>3km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p> Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/tra-hoa-qua-1-4213149-1510722870">
-							<b>Trà Organic Heicha</b>
-							<br><br>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>1.9km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p> Freeship 2km</p>
-					</div>
-				</a></div>
-			</div>
-			<!-- /*Thẻ đồ ăn hàng dưới*/ -->
-			<div class="TheChinh">
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/k-kei-38a-cao-ba-quat-4-1438717789">
-							<b>Kei - Korean Food & Coffe Style</b>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>0.4km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p>Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/layla-tiem-tra-chanh-nguyen-thai-hoc-quan-ba-dinh-ha-noi-1611668501328312086-eatery-avatar-1611668501">
-							<b>Layla - Tiệm Trà Chanh - Nguyễn Thái Học</b>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>2.3km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p>Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/mon-ngon-via-he-bun-oc-suon-quan-ba-dinh-ha-noi-1545905681236972829-eatery-avatar-1545905681">
-							<b>Món Ngon Vỉa Hè - Bún Ốc Sườn</b>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>4.8km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p>Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/watanabe-coffee-and-camera-quan-ba-dinh-ha-noi-1611661130886806361-eatery-avatar-1611661131">
-							<b>Watanabe - Coffee & Camera</b>
-							<br><br>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>1.6km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p>Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/ono-poke-healthy-food-online-shop-online-quan-hai-ba-trung-ha-noi-1536745444539619397-eatery-avatar-1625907823">
-							<b>Ono Poke - Healthy Food Online</b>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>6km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p>Freeship 2km</p>
-					</div>
-				</a></div>
-			</div>
-		</div>
-
-<!-- -------------      Thẻ div đồ ăn khác           ----------------------------------------------------- -->
-		<div class="TheChuaSP" id="SP2">
-			<!-- /*Thẻ đồ ăn hàng trên*/ -->
-			<div class="TheChinh">
-				<div class="TheDoAn"><a href="#">
-					<div>
-						<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/nang-juice-nuoc-ep-and-tra-trai-cay-quan-hoan-kiem-ha-noi-1611852129136943889-eatery-avatar-1632207430">
-						<br>
-						<b>Nắng Juice - Nước Ép & Trà Trái Cây</b>
-					</div>
-					<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>2.2km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p> Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-					<div>
-						<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/banh-mi-chao-678-quan-hoan-kiem-ha-noi-1622560322692944209-eatery-avatar-1625944252">
-						<br>
-						<b>Trà Bí Đao Kim Kim</b>
-						<br><br>
-					</div>
-					<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>4.1km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p> Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-					<div>
-						<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/mon-ngon-via-he-quan-ba-dinh-ha-noi-1573647153672710179-eatery-avatar-1625916294">
-						<b>Món Ngon Vỉa Hè</b>
-						<br>
-						<br>
-					</div>
-					<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>1.5km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p> Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/dlions-restaurant-nha-hang-singapore-quan-hoan-kiem-ha-noi-1585105318916914487-eatery-avatar-1585105773">
-							<b>D'LIONS Restaurant (Nhà Hàng Singapore)</b>
-							<br>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>2km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p> Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/chao-ga-kho-hanh-ba-thuy-shop-online-quan-hoan-kiem-ha-noi-1612051997199427504-eatery-avatar-1612051997">
-							<b>Cháo Gà Khô Hành Bà Thúy - Shop Online</b>
-							<br>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>4km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p> Freeship 2km</p>
-					</div>
-				</a></div>
-			</div>
-			<!-- /*Thẻ đồ ăn hàng dưới*/ -->
-			<div class="TheChinh">
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/tung-ban-quan-1528651844-2-6317663-1544088874">
-							<b>Tùng Bản Quán</b>
-							<br><br>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>3.5km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p>Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/com-set-1515063294-4-5253542-1515063294">
-							<b>Bếp Bắp Cải - Cơm Sườn, Gà, Bò</b>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>4.4km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p>Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/long-heo-dac-biet-le-duan-quan-hoan-kiem-ha-noi-1545950391955679655-eatery-avatar-1625910725">
-							<b>Lòng Heo Đặc Biệt - Lê Duẩn</b>
-							<br><br>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>2.8km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p>Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/co-phuong-bun-bung-and-bun-cha-nam-ngu-quan-hoan-kiem-ha-noi-1545947339699321798-eatery-avatar-1545947339">
-							<b>Cô Phương - Bún Bung & Bún Chả - Nam Ngư</b>
-							<br>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>3.2km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p>Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/pho-10k-hai-ba-trung-quan-hoan-kiem-ha-noi-1611878251114426447-eatery-avatar-1611878251">
-							<b>Phớ 10K - Hai Bà Trưng</b>
-							<br><br>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>1.5km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p>Freeship 2km</p>
-					</div>
-				</a></div>
-			</div>
-		</div>
-
-		<!-- -------------      Thẻ div đồ ăn khác           ----------------------------------------------------- -->
-		<div class="TheChuaSP" id="SP3">
-			<!-- /*Thẻ đồ ăn hàng trên*/ -->
-			<div class="TheChinh">
-				<div class="TheDoAn"><a href="#">
-					<div>
-						<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/quay-nong-and-banh-tieu-trich-sai-quan-tay-ho-ha-noi-1545952680025930622-eatery-avatar-1635426461">
-						<br>
-						<b>Quẩy Nóng & Bánh Tiêu - Trích sài</b>
-					</div>
-					<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>2.3km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p> Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-					<div>
-						<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/bep-nha-bong-sui-cao-and-ha-cao-online-quan-tay-ho-ha-noi-1545957389238643066-eatery-avatar-1545957389">
-						<br>
-						<b>Bếp Nhà Bông - Sủi Cảo & Há Cảo Online</b>
-					</div>
-					<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>1km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p> Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-					<div>
-						<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/co-hanh-bun-and-mien-ngan-quan-tay-ho-ha-noi-1611673499105391965-eatery-avatar-1625936355">
-						<b>Hạnh Béo - Bún & Miến Ngan</b>
-						<br><br>
-					</div>
-					<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>3.1km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p> Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/anh-ga-chan-canh-ga-rang-muoi-quan-tay-ho-ha-noi-1612081680338927424-eatery-avatar-1612081680">
-							<b>Anh Gà - Chân Cánh Gà Rang Muối</b>
-							<br>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>5.3km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p> Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/mon-ngon-co-binh-quan-tay-ho-ha-noi-1587194026920921628-eatery-avatar-1587216148">
-							<b>Món Ngon Cô Bình</b>
-							<br><br>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>3.3km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p> Freeship 2km</p>
-					</div>
-				</a></div>
-			</div>
-			<!-- /*Thẻ đồ ăn hàng dưới*/ -->
-			<div class="TheChinh">
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/stay-healthys-kitchen-shop-online-quan-dong-da-ha-noi-1611851136466398052-eatery-avatar-1611851136">
-							<b>Stay Healthy’s Kitchen - Shop Online</b>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>2.5km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p>Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/hai-food-mi-tron-indomie-and-caramen-quan-tay-ho-ha-noi-1612025082994899851-eatery-avatar-1612025083">
-							<b>Hải Food - Mì Trộn Indomie & Caramen</b>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>4.3km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p>Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/com-29-com-van-phong-quan-tay-ho-ha-noi-1611876227211723997-eatery-avatar-1611876227">
-							<b>Cơm 29 - Cơm Văn Phòng</b>
-							<br><br>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>1km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p>Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/kem-kep-tasty-thuy-khue-quan-tay-ho-ha-noi-1611996843804157026-eatery-avatar-1611996844">
-							<b>Kem Kẹp Tasty - Thụy Khuê</b>
-							<br><br>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>2km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p>Freeship 2km</p>
-					</div>
-				</a></div>
-				<div class="TheDoAn"><a href="#">
-						<div>
-							<img class="TheAnh" src="https://tea-3.lozi.vn/v1/images/resized/com-tam-vien-dong-quan-tay-ho-ha-noi-1611423715845834722-eatery-avatar-1611423715">
-							<b>Cơm Tấm Viễn Đông</b>
-							<br><br>
-						</div>
-						<div class="TheDoAnChinh">
-						<i class="material-icons">place</i>
-						<p>3km</p>
-					</div>
-					<div class="Hang">
-						<img src="km.png">
-						<p>Freeship 2km</p>
-					</div>
-				</a></div>
-			</div>
-		</div>
-	</div>
+        <!-- load cửa hàng -->
+    <?php 
+        require_once('./access/php/cuahang/user/index.php');
+    ?>
 
 
     <!-- Nam -->
@@ -1340,13 +900,13 @@
                 </div>
                 <i class="fas fa-times form-change-password_icon"></i>
             </div>
-            <form method="post" action= "./access/php/ChangePassWord.php" class="form-changepassword_main" onsubmit="return validateForm();">
+            <form method="post" onsubmit="return validateForm();" action="./access/php/ChangePassword.php" class="form-changepassword_main">
                 <h4 class="form-changepw_main-content">Nhập thông tin để đổi mật khẩu</h4>
                 <input type="text" name="txtsdt" id="txtchangepwsdt" class="form-changepw_input-sdt" placeholder="Số điện thoại" required oninvalid="setCustomValidity('Nhập SĐt của bạn')" oninput="setCustomValidity('')">
                 <input type="password" name="txtpasswordnow" id="txtpasswordnow" class="form-changepw_input-pwnow" placeholder="Mật khẩu hiện tại" required oninvalid="setCustomValidity('Nhập mật khẩu hiện tại')" oninput="setCustomValidity('')">
                 <input type="password" name="txtpasswordnew" id="txtpasswordnew" class="form-changepw_input-pwnew" placeholder="Mật khẩu mới" required oninvalid="setCustomValidity('Nhập mật khẩu mới')" oninput="setCustomValidity('')">
                 <input type="password" name="txtpasswordconfirm" id="txtpasswordconfirm" class="form-changepw_input-pwconfirm" placeholder="Xác nhận mật khẩu mới"  required oninvalid="setCustomValidity('Xác nhận mật khẩu mới')" oninput="setCustomValidity('')">
-                <label for="" class="form-notify">thông báo:</label>
+                <label for="" class="form-notify"></label>
                 <button type="submit" class="form-changepassword_btn">Đổi mật khẩu</button>
             </form>
         </div>
@@ -1397,7 +957,7 @@
     </div>
 
     <!-- JS long -->
-    <script src="./access/style/main.js"></script>
+    <script src="http://localhost:8080/Web-Food/access/style/main.js"></script>
 
      <!-- nút ring ring -->
      <div class="ring-wrapper">     
@@ -1421,9 +981,7 @@
             $pass = $_POST['password'];
             $conn = mysqli_connect("localhost", "root", "","EatFood");
             if($conn) {
-            // step 2
             $query = "SELECT * FROM account where SDT = '".$sdt."' and passWord = '".$pass."'";
-            // step 3
             $result = mysqli_query($conn, $query);
             if(mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_assoc($result)) {
@@ -1437,6 +995,14 @@
                     echo "<script type='text/javascript'>";
                     echo "LoginBtn.classList.remove('active');";
                     echo "</script>";
+                    echo "<script type='text/javascript'>";
+                    // echo "alert('Đăng nhập thành công.');";
+                    echo "</script>";
+                    if($row["Job"] == "admin") {
+                        echo "<script type='text/javascript'>";
+                        echo "document.getElementById('admin').classList.add('active');";
+                        echo "</script>";
+                    }
                 }
             }else {
                 echo "<script type='text/javascript'>";
